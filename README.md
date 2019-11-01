@@ -32,8 +32,4 @@ The purpose of this game is to test your luck! See if you can match 3 images in 
 
 ### Wire Frame- Slot Machine
 
-<<<<<<< HEAD
 ![Slot Machine](https://raw.githubusercontent.com/jcjv94/Slot-Machine/master/Images/wireframe.jpg)
-=======
-![Slot Machine](https://raw.githubusercontent.com/jcjv94/Slot-Machine/master/Images/wireframe.jpg)
->>>>>>> 2021417e63cb1c4265d76ffa31bacf184f2d180a
