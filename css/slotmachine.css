@@ -1,15 +1,15 @@
-body{
+body {
     background: black;
 }
 
-.fullGame{
+.fullGame {
     text-align: center;
     border: 4px solid white;
     color: white;
     /* margin: auto 400px; */
 }
 
-button{
+button {
     display: flex;
     border: 2px solid white;
     background-color: transparent;
@@ -25,12 +25,13 @@ button{
 
 }
 
-.circle{
+.circle {
     width: 100px;
     height: 100px;
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
     border-radius: 50px;
-    background: white;
+    background: transparent;
+    border: 2px solid white;
     display: inline-block;
 }

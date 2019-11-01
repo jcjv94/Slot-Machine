@@ -1,24 +1,36 @@
 // create slots- slot1, slot2, slot3
-let slot1 = ["star","jackpot","cherry","orange"]
-let slot2 = ["star","jackpot","cherry","orange"]
-let slot3 = ["star","jackpot","cherry","orange"]
+
+
+let slot1 = ["star", "jackpot", "cherry", "orange"]
+let slot2 = ["star", "jackpot", "cherry", "orange"]
+let slot3 = ["star", "jackpot", "cherry", "orange"]
 
 // randomize slot1
-let showSlot1 = slot1[Math.floor(Math.random()* slot1.length)];
+let showSlot1 = slot1[Math.floor(Math.random() * slot1.length)];
 // console.log(showSlot1)
 
 document.getElementById('slt1').innerText = showSlot1
 
 // randomize slot 2
-let showSlot2 = slot2[Math.floor(Math.random()* slot2.length)];
+let showSlot2 = slot2[Math.floor(Math.random() * slot2.length)];
 // console.log(showSlot2)
 document.getElementById('slt2').innerText = showSlot2
 
 // randomize slot3
-let showSlot3 = slot3[Math.floor(Math.random()* slot3.length)];
+let showSlot3 = slot3[Math.floor(Math.random() * slot3.length)];
 // console.log(showSlot3)
 document.getElementById('slt3').innerText = showSlot3
 
+
+let results = document.getElementById('result');
+
+function winner() {
+    if ((showSlot1 === showSlot2) && (showSlot1 === showSlot3)) {
+        results.innerHTML = "Winner";
+    } else {
+        results.innerHTML = 'Loser';
+    }
+}
 
 // initialize null- empty slots, no one has pushed the button (or lever) 
 
