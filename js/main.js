@@ -1,6 +1,5 @@
-// Project 1 Pseudocode- game play
-
 // create slots- slot1, slot2, slot3
+
 
 // initialize null- empty slots, no one has pushed the button (or lever) 
 

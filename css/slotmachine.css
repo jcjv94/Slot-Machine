@@ -1,18 +1,36 @@
-/* Project 1 Pseudocode- game play
+body{
+    background: black;
+}
 
-create slots- slot1, slot2, slot3
+.fullGame{
+    text-align: center;
+    border: 4px solid white;
+    color: white;
+    margin: auto 400px;
+}
 
-initialize null- empty slots, no one has pushed the button (or lever) 
+button{
+    display: flex;
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    display: block;
+    margin: auto;
+    font-size: 18px;
+    width: 50px;
+    height: 50px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
 
-define winning combinations
+}
 
-create button to spin the slots.
-
-when buttons is push button to randomize slots (spinning effect on images)
-
-have the 3 slots stop spinning one after another.
-
-if you get 3 of the same picture player wins- possibly add audio when a player hits the jackpot- possibly add point system, in order o gain credits to spin again
-
-if you don’t get 3 of the same picture, you lose. Spin again option
- */
+.circle{
+    width: 100px;
+    height: 100px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    background: white;
+    display: inline-block;
+}
