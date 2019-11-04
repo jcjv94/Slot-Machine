@@ -25,12 +25,14 @@ document.getElementById('slt3').innerText = showSlot3
 let results = document.getElementById('result');
 
 function winner() {
-    if ((showSlot1 === showSlot2) && (showSlot1 === showSlot3)) {
-        results.innerHTML = "Winner";
+    if ((showSlot1 === showSlot2) && (showSlot2 === showSlot3)) {
+        results.textContent = "Winner";
     } else {
-        results.innerHTML = 'Loser';
+        results.textContent = 'Loser';
     }
 }
+
+winner();
 
 // initialize null- empty slots, no one has pushed the button (or lever) 
 
