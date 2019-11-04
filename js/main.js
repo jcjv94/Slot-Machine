@@ -1,9 +1,20 @@
 // create slots- slot1, slot2, slot3
+const seven = new Image();
+const lemon = new Image();
+const cherry = new Image();
+const orange = new Image();
+
+seven.src = "Images/Slot image/seven.png";
+lemon.src = "Images/Slot image/lemon.png";
+cherry.src = "Images/Slot image/cherry.png";
+orange.src = "Images/Slot image/orange.png";
 
 
-let slot1 = ["star", "jackpot", "cherry", "orange"]
-let slot2 = ["star", "jackpot", "cherry", "orange"]
-let slot3 = ["star", "jackpot", "cherry", "orange"]
+
+let slot1 = [seven, lemon, cherry, orange]
+let slot2 = [seven, lemon, cherry, orange]]◊
+let slot3 = [seven, lemon, cherry, orange]]
+
 
 // randomize slot1
 let showSlot1 = slot1[Math.floor(Math.random() * slot1.length)];
@@ -22,14 +33,26 @@ let showSlot3 = slot3[Math.floor(Math.random() * slot3.length)];
 document.getElementById('slt3').innerText = showSlot3
 
 
+// document.querySelectorAll('button').addEventListener('click', init);
+// document.querySelectorAll('.allSlots').addEventListener('click', spin);
+
+
+// function init() {
+//     spin = 
+//     winner = null;
+//     render();
+//   }
+
+  
+
 let results = document.getElementById('result');
 
 function winner() {
-    if ((showSlot1 === showSlot2) && (showSlot2 === showSlot3)) {
-        results.textContent = "Winner";
+    if ((showSlot1 === showSlot2) && (showSlot2 === showSlot3) && (showSlot3 === showSlot1)) {
+        results.textContent = "You Win!";
     } else {
-        results.textContent = 'Loser';
-    }
+        results.textContent = "You Lose";
+        }
 }
 
 winner();
@@ -49,33 +72,9 @@ winner();
 // if you don’t get 3 of the same picture, you lose. Spin again option
 
 
-// var slots;
-// var winner;
-
-// function getWinner() {
-//     if (Math.abs(slots[0] + slots[0] + slots[0]) === 3) return slots[0];
-//     if (Math.abs(slots[1] + slots[1] + slots[1]) === 3) return slots[3];
-//     if (Math.abs(slots[2] + slots[2] + slots[2]) === 3) return slots[6];
-//     if (Math.abs(slots[3] + slots[3] + slots[3]) === 3) return slots[2];
-//     if (board.includes(null)) return null;
-//     return 'T';
-//   }
-
-// var winCombos = [
-//     [0 , 0, 0]
-//     [1, 1, 1]
-//     [2, 2, 2]
-//     [3, 3, 3]
-// ];
-
-
-
 // var rotate = false;
 // var circles = document.querySelectorAll('.circle');
 // var message = document.querySelectorAll('.msg');
-
-// document.querySelectorAll('button').addEventListener('click', init);
-// document.querySelectorAll('.allSlots').addEventListener('click', spin);
 
 /*----- constants -----*/
 /*----- app's state (variables) -----*/
