@@ -1,24 +1,19 @@
 body {
     background: black;
-    display: grid; 
-    grid-template-columns: auto auto auto;   
-    position: center;
-    justify-content: center; 
+    /* display: grid; */
+    /* grid-template-columns: auto auto auto; */
+    /* position: center; */
+    /* justify-content: center; */
+    text-align: center;
+    /* margin: auto; */
 }
 
 h1 {
     font-family: 'Rye', cursive;
     font-size: 60px;
     /* border: 2px dashed blue; */
-    color: yellow;
-}
-
-
-.fullGame {
-    text-align: center;
-    /* border: 4px solid white; */
-    color: white;
-    margin: auto;
+    color: red;
+    text-shadow: 3px 3px 0 whitesmoke;
 }
 
 #result {
@@ -27,61 +22,63 @@ h1 {
 }
 
 button {
-    display: flex;
+    /* display: flex; */
     border: 2px solid white;
     background-color: transparent;
-    color: greenyellow;
-    display: block;
-    margin: 20px auto;
+    color: red;
+    /* display: block; */
+    /* margin: 20px auto; */
     font-size: 18px;
     width: 50px;
     height: 50px;
     /* -webkit-border-radius: 25px; */
     /* -moz-border-radius: 25px; */
     border-radius: 25px;
+    min-height: fit-content;
+    margin: 50px 0 20px 0;
 
 }
 
-#slt1{
+#slt1 {
     width: 175px;
     height: 175px;
     animation-name: ring1;
-    animation-duration: 3s;
+    animation-duration: 2.5s;
     transform: rotateX(3600deg);
+    overflow: hidden;
 }
 
-#slt2{
+#slt2 {
     width: 175px;
     height: 175px;
     animation-name: ring1;
-    animation-duration: 3.5s;
+    animation-duration: 3.2s;
     transform: rotateX(3600deg);
+    overflow: hidden;
 
 }
 
-#slt3{
+#slt3 {
     width: 175px;
     height: 175px;
     animation-name: ring1;
-    animation-duration: 4s;
+    animation-duration: 3.9s;
     transform: rotateX(3600deg);
-
+    overflow: hidden;
 }
 
 
 
 .circle {
-    /* width: 175px;
-    height: 175px;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    border-radius: 50px;
-    background: transparent;
-    order: 2px solid white; */
     display: inline-block;
 }
 
-@keyframes ring1{ 
-    from{transform: rotateX(0);}
-    to{transform: rotateX(720);}
+@keyframes ring1 {
+    from {
+        transform: rotateX(0);
+    }
+
+    to {
+        transform: rotateX(720);
+    }
 }

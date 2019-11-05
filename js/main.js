@@ -24,16 +24,17 @@
 
 /*----- constants -----*/
 
-let slot1 = ["seven", "lemon", "cherry", "orange"]
-let slot2 = ["seven", "lemon", "cherry", "orange"]
-let slot3 = ["seven", "lemon", "cherry", "orange"]
+let slot1 = ["seven", "lemon", "cherry", "orange", "bar", "grape", "banana", "watermelon"]
+let slot2 = ["seven", "lemon", "cherry", "orange", "bar", "grape", "banana", "watermelon"]
+let slot3 = ["seven", "lemon", "cherry", "orange", "bar", "grape", "banana", "watermelon"]
 // let imageEndPoint = `https://raw.githubusercontent.com/jcjv94/Slot-Machine/master/Images/Slot%20image/`
 
-/*----- app's state (variables) -----*/ /*----- cached element references -----*/
+/*----- app's state (variables) -----*/
+/*----- cached element references -----*/
 
 let showSlot1, showSlot2, showSlot3;
 
-/*----- event listeners -----*/ 
+/*----- event listeners -----*/
 
 document.querySelector('button').addEventListener('click', spin);
 
@@ -46,7 +47,7 @@ function spin() {
     // console.log(showSlot1)
 
     // document.getElementById('slt1').innerText = showSlot1
-    
+
     document.getElementById('slt1').innerHTML = `<img src="https://raw.githubusercontent.com/jcjv94/Slot-Machine/master/Images/Slot%20image/${showSlot1}.png" alt=""></img>`
 
     // randomize slot 2
@@ -58,18 +59,18 @@ function spin() {
     // console.log(showSlot3)
     document.getElementById('slt3').innerHTML = `<img src="https://raw.githubusercontent.com/jcjv94/Slot-Machine/master/Images/Slot%20image/${showSlot3}.png" alt=""></img>`
     results.textContent = "Spinning....";
-    setTimeout(function(){
+    setTimeout(function () {
 
         winner();
     }, 4000)
 }
 
 
-let img1 = document.querySelector('#slt1'); 
-let img2 = document.querySelector('#slt2'); 
-let img3 = document.querySelector('#slt3'); 
+let img1 = document.querySelector('#slt1');
+let img2 = document.querySelector('#slt2');
+let img3 = document.querySelector('#slt3');
 
-document.getElementById('spinner').addEventListener('click',function(){
+document.getElementById('spinner').addEventListener('click', function () {
     console.log("HITTING")
     console.log(img1)
     img1.style.animationName = 'none';
@@ -78,18 +79,18 @@ document.getElementById('spinner').addEventListener('click',function(){
     img1.textContent = '';
     img2.textContent = '';
     img3.textContent = '';
-    setTimeout(function() {
-      // note that you only need a single animation
-      spin()
-      // setTimeout(function() {
+    setTimeout(function () {
+        // note that you only need a single animation
+        spin()
+        // setTimeout(function() {
         img1.style.animationName = 'ring1';
         img2.style.animationName = 'ring1';
         img3.style.animationName = 'ring1';
-        
+
         // 
-      // }, 3200);
+        // }, 3200);
     }, 100);
-  });
+});
 
 
 
