@@ -1,41 +1,46 @@
 body {
-    background: black;
+    /* background: black; */
     /* display: grid; */
     /* grid-template-columns: auto auto auto; */
     /* position: center; */
     /* justify-content: center; */
     text-align: center;
     /* margin: auto; */
+    background-image: url(https://images.unsplash.com/photo-1482177988528-7f1d8d6e775c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80);
+    margin-top: 10vh;
 }
 
 h1 {
     font-family: 'Rye', cursive;
     font-size: 60px;
     /* border: 2px dashed blue; */
-    color: red;
-    text-shadow: 3px 3px 0 whitesmoke;
+    color: whitesmoke;
+    text-shadow: 3px 3px 0 red;
 }
 
 #result {
-    color: greenyellow;
-    font-size: 25px;
+    color: white;
+    font-size: 40px;
+    text-shadow: 3px 3px 0 black;
+    font-family: 'Rye', cursive;
 }
 
 button {
     /* display: flex; */
     border: 2px solid white;
-    background-color: transparent;
-    color: red;
+    background-color: rgba(255, 0, 0, 0.767);
+    color: whitesmoke;
     /* display: block; */
     /* margin: 20px auto; */
-    font-size: 18px;
-    width: 50px;
-    height: 50px;
+    font-size: 20px;
+    width: 100px;
+    height: 100px;
     /* -webkit-border-radius: 25px; */
     /* -moz-border-radius: 25px; */
-    border-radius: 25px;
+    border-radius: 50px;
     min-height: fit-content;
     margin: 50px 0 20px 0;
+    text-transform: uppercase;
 
 }
 
@@ -67,7 +72,15 @@ button {
     overflow: hidden;
 }
 
+.fullGame {
+    border: 2px solid white;
+    border-radius: 7px;
+    background-color: #000000ad;
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
 
+}
 
 .circle {
     display: inline-block;
