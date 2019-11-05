@@ -1,8 +1,8 @@
 // create slots- slot1, slot2, slot3
-// const seven = img();
-// const lemon = img();
-// const cherry = img();
-// const orange = img();
+// const seven = document.getElementById(seven);
+// const lemon = document.getElementById(lemon);
+// const cherry = document.getElementById(cherry);
+// const orange = document.getElementById(orange);
 
 // seven.src = "https://raw.githubusercontent.com/jcjv94/Slot-Machine/master/Images/Slot%20image/seven.png";
 // lemon.src = "https://raw.githubusercontent.com/jcjv94/Slot-Machine/master/Images/Slot%20image/lemon.png";
@@ -16,32 +16,48 @@
 // let slot3 = [seven, lemon, cherry, orange]
 
 
+// function slotImages() {
+//     var img = document.createElement('img');
+//     img.src = "https://raw.githubusercontent.com/jcjv94/Slot-Machine/master/Images/Slot%20image/orange.png";
+//     document.slot1.appendChild(img);
+// }
 
-let slot1 = ["Seven", "Lemon", "Cherry", "Orange"]
-let slot2 = ["Seven", "Lemon", "Cherry", "Orange"]
-let slot3 = ["Seven", "Lemon", "Cherry", "Orange"]
+/*----- constants -----*/
+
+let slot1 = ["seven", "lemon", "cherry", "orange"]
+let slot2 = ["seven", "lemon", "cherry", "orange"]
+let slot3 = ["seven", "lemon", "cherry", "orange"]
+// let imageEndPoint = `https://raw.githubusercontent.com/jcjv94/Slot-Machine/master/Images/Slot%20image/`
+
+/*----- app's state (variables) -----*/ /*----- cached element references -----*/
 
 let showSlot1, showSlot2, showSlot3;
 
+/*----- event listeners -----*/ 
+
 document.querySelector('button').addEventListener('click', spin);
 
+
+/*----- functions -----*/
 
 function spin() {
     // randomize slot1
     showSlot1 = slot1[Math.floor(Math.random() * slot1.length)];
     // console.log(showSlot1)
 
-    document.getElementById('slt1').innerText = showSlot1
+    // document.getElementById('slt1').innerText = showSlot1
+    
+
+    document.getElementById('slt1').innerHTML = `<img src="https://raw.githubusercontent.com/jcjv94/Slot-Machine/master/Images/Slot%20image/${showSlot1}.png" alt=""></img>`
 
     // randomize slot 2
     showSlot2 = slot2[Math.floor(Math.random() * slot2.length)];
     // console.log(showSlot2)
-    document.getElementById('slt2').innerText = showSlot2
-
+    document.getElementById('slt2').innerHTML = `<img src="https://raw.githubusercontent.com/jcjv94/Slot-Machine/master/Images/Slot%20image/${showSlot2}.png" alt=""></img>`
     // randomize slot3
     showSlot3 = slot3[Math.floor(Math.random() * slot3.length)];
     // console.log(showSlot3)
-    document.getElementById('slt3').innerText = showSlot3
+    document.getElementById('slt3').innerHTML = `<img src="https://raw.githubusercontent.com/jcjv94/Slot-Machine/master/Images/Slot%20image/${showSlot3}.png" alt=""></img>`
 
     winner();
 }
@@ -55,6 +71,9 @@ function winner() {
         results.textContent = "You Lose";
     }
 }
+
+
+
 
 
 
@@ -89,9 +108,3 @@ function winner() {
 // var rotate = false;
 // var circles = document.querySelectorAll('.circle');
 // var message = document.querySelectorAll('.msg');
-
-/*----- constants -----*/
-/*----- app's state (variables) -----*/
-/*----- cached element references -----*/
-/*----- event listeners -----*/
-/*----- functions -----*/
