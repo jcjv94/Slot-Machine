@@ -1,5 +1,9 @@
 body {
     background: black;
+    display: grid; 
+    grid-template-columns: auto auto auto;   
+    position: center;
+    justify-content: center; 
 }
 
 h1 {
@@ -8,6 +12,7 @@ h1 {
     /* border: 2px dashed blue; */
     color: yellow;
 }
+
 
 .fullGame {
     text-align: center;
@@ -27,7 +32,7 @@ button {
     background-color: transparent;
     color: greenyellow;
     display: block;
-    margin: auto;
+    margin: 20px auto;
     font-size: 18px;
     width: 50px;
     height: 50px;
@@ -37,44 +42,40 @@ button {
 
 }
 
-/* #slt1{
-    width: 175px;
-    height: 175px;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    border-radius: 50px;
-    background: transparent;
-    border: 2px solid white;
+#slt1{
+    animation-name: ring1;
+    animation-duration: 3s;
+    transform: rotateX(3600deg);
 }
 
 #slt2{
-    width: 175px;
-    height: 175px;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    border-radius: 50px;
-    background: transparent;
-    border: 2px solid white;
+    animation-name: ring1;
+    animation-duration: 3.5s;
+    transform: rotateX(3600deg);
+
 }
 
 #slt3{
+    animation-name: ring1;
+    animation-duration: 4s;
+    transform: rotateX(3600deg);
+
+}
+
+
+
+.circle {
     width: 175px;
     height: 175px;
-    -webkit-border-radius: 50px;
+    webkit-border-radius: 50px;
     -moz-border-radius: 50px;
     border-radius: 50px;
     background: transparent;
     border: 2px solid white;
-} */
-
-
-.circle {
-    /* width: 175px;
-    height: 175px;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    border-radius: 50px;
-    background: transparent;
-    /* border: 2px solid white; */
     display: inline-block;
+}
+
+@keyframes ring1{ 
+    from{transform: rotateX(0);}
+    to{transform: rotateX(720);}
 }

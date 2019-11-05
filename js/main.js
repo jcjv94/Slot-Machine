@@ -47,7 +47,6 @@ function spin() {
 
     // document.getElementById('slt1').innerText = showSlot1
     
-
     document.getElementById('slt1').innerHTML = `<img src="https://raw.githubusercontent.com/jcjv94/Slot-Machine/master/Images/Slot%20image/${showSlot1}.png" alt=""></img>`
 
     // randomize slot 2
@@ -58,9 +57,41 @@ function spin() {
     showSlot3 = slot3[Math.floor(Math.random() * slot3.length)];
     // console.log(showSlot3)
     document.getElementById('slt3').innerHTML = `<img src="https://raw.githubusercontent.com/jcjv94/Slot-Machine/master/Images/Slot%20image/${showSlot3}.png" alt=""></img>`
+    results.textContent = "Spinning....";
+    setTimeout(function(){
 
-    winner();
+        winner();
+    }, 4000)
 }
+
+
+let img1 = document.querySelector('#slt1'); 
+let img2 = document.querySelector('#slt2'); 
+let img3 = document.querySelector('#slt3'); 
+
+document.getElementById('spinner').addEventListener('click',function(){
+    console.log("HITTING")
+    console.log(img1)
+    img1.style.animationName = 'none';
+    img2.style.animationName = 'none';
+    img3.style.animationName = 'none';
+    img1.textContent = '';
+    img2.textContent = '';
+    img3.textContent = '';
+    setTimeout(function() {
+      // note that you only need a single animation
+      spin()
+      // setTimeout(function() {
+        img1.style.animationName = 'ring1';
+        img2.style.animationName = 'ring1';
+        img3.style.animationName = 'ring1';
+        
+        // 
+      // }, 3200);
+    }, 100);
+  });
+
+
 
 let results = document.getElementById('result');
 
@@ -68,9 +99,10 @@ function winner() {
     if ((showSlot1 === showSlot2) && (showSlot2 === showSlot3) && (showSlot3 === showSlot1)) {
         results.textContent = "You Win!";
     } else {
-        results.textContent = "You Lose";
+        results.textContent = "You Lose. Spin Again!";
     }
 }
+
 
 
 
