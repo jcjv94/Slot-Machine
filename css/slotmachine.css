@@ -36,19 +36,23 @@ button {
     font-size: 18px;
     width: 50px;
     height: 50px;
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
+    /* -webkit-border-radius: 25px; */
+    /* -moz-border-radius: 25px; */
     border-radius: 25px;
 
 }
 
 #slt1{
+    width: 175px;
+    height: 175px;
     animation-name: ring1;
     animation-duration: 3s;
     transform: rotateX(3600deg);
 }
 
 #slt2{
+    width: 175px;
+    height: 175px;
     animation-name: ring1;
     animation-duration: 3.5s;
     transform: rotateX(3600deg);
@@ -56,6 +60,8 @@ button {
 }
 
 #slt3{
+    width: 175px;
+    height: 175px;
     animation-name: ring1;
     animation-duration: 4s;
     transform: rotateX(3600deg);
@@ -65,13 +71,13 @@ button {
 
 
 .circle {
-    width: 175px;
+    /* width: 175px;
     height: 175px;
-    webkit-border-radius: 50px;
+    -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
     border-radius: 50px;
     background: transparent;
-    border: 2px solid white;
+    order: 2px solid white; */
     display: inline-block;
 }
 
