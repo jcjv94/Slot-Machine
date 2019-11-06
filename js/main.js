@@ -80,12 +80,10 @@ function spin() {
     showSlot1 = AllTypes[Math.floor(Math.random() * slot1.length)];
     showSlot2 = AllTypes[Math.floor(Math.random() * slot1.length)];
     showSlot3 = AllTypes[Math.floor(Math.random() * slot1.length)];
-    // console.log(showSlot1)
 
-    // document.getElementById('slt1').innerText = showSlot1
-    document.getElementById('slt1').innerHTML = `<img src="https://raw.githubusercontent.com/jcjv94/Slot-Machine/master/Images/Slot%20image/${showSlot1}.png" alt=""></img>`
-    document.getElementById('slt2').innerHTML = `<img src="https://raw.githubusercontent.com/jcjv94/Slot-Machine/master/Images/Slot%20image/${showSlot2}.png" alt=""></img>`
-    document.getElementById('slt3').innerHTML = `<img src="https://raw.githubusercontent.com/jcjv94/Slot-Machine/master/Images/Slot%20image/${showSlot3}.png" alt=""></img>`
+    document.getElementById('slt1').innerHTML = `<img src="https://raw.githubusercontent.com/jcjv94/Slot-Machine/master/Images/Slot_image/${showSlot1}.png" alt=""></img>`
+    document.getElementById('slt2').innerHTML = `<img src="https://raw.githubusercontent.com/jcjv94/Slot-Machine/master/Images/Slot_image/${showSlot2}.png" alt=""></img>`
+    document.getElementById('slt3').innerHTML = `<img src="https://raw.githubusercontent.com/jcjv94/Slot-Machine/master/Images/Slot_image/${showSlot3}.png" alt=""></img>`
 
     ////////////////////////////////
 
@@ -93,35 +91,26 @@ function spin() {
     var id = setInterval(frame, 400);
 
     function frame() {
-        console.log("HELLOOOOOOOO")
         if (x == 7) {
             clearInterval(id);
         } else {
             x++;
-            // console.log("hitting else")
             let firstSlot = document.getElementById('slt1')
             let randomNumber1 = Math.floor(Math.random() * AllTypes.length)
-            console.log(randomNumber1)
-            firstSlot.children[0].src = `https://raw.githubusercontent.com/jcjv94/Slot-Machine/master/Images/Slot%20image/${AllTypes[randomNumber1]}.png`
-            console.log(firstSlot)
+            firstSlot.children[0].src = `https://raw.githubusercontent.com/jcjv94/Slot-Machine/master/Images/Slot_image/${AllTypes[randomNumber1]}.png`
 
             let secondSlot = document.getElementById('slt2')
             let randomNumber2 = Math.floor(Math.random() * AllTypes.length)
-            console.log(randomNumber2)
-            secondSlot.children[0].src = `https://raw.githubusercontent.com/jcjv94/Slot-Machine/master/Images/Slot%20image/${AllTypes[randomNumber2]}.png`
-            console.log(secondSlot)
+            secondSlot.children[0].src = `https://raw.githubusercontent.com/jcjv94/Slot-Machine/master/Images/Slot_image/${AllTypes[randomNumber2]}.png`
 
             let thirdSlot = document.getElementById('slt3')
             let randomNumber3 = Math.floor(Math.random() * AllTypes.length)
-            console.log(randomNumber3)
-            thirdSlot.children[0].src = `https://raw.githubusercontent.com/jcjv94/Slot-Machine/master/Images/Slot%20image/${AllTypes[randomNumber3]}.png`
-            console.log(thirdSlot)
+            thirdSlot.children[0].src = `https://raw.githubusercontent.com/jcjv94/Slot-Machine/master/Images/Slot_image/${AllTypes[randomNumber3]}.png`
 
             showSlot1 = AllTypes[randomNumber1]
             showSlot2 = AllTypes[randomNumber2]
             showSlot3 = AllTypes[randomNumber3]
 
-            // document.getElementById('slt1').children[0].src = `https://raw.githubusercontent.com/jcjv94/Slot-Machine/master/Images/Slot%20image/${showSlot1}.png`
         }
     }
 
@@ -129,14 +118,6 @@ function spin() {
 
     ////////////////////////////////
 
-    // randomize slot 2
-    // showSlot2 = AllTypes[Math.floor(Math.random() * slot2.length)];
-    // // console.log(showSlot2)
-    // document.getElementById('slt2').innerHTML = `<img src="https://raw.githubusercontent.com/jcjv94/Slot-Machine/master/Images/Slot%20image/${showSlot2}.png" alt=""></img>`
-    // // randomize slot3
-    // showSlot3 = AllTypes[Math.floor(Math.random() * slot3.length)];
-    // // console.log(showSlot3)
-    // document.getElementById('slt3').innerHTML = `<img src="https://raw.githubusercontent.com/jcjv94/Slot-Machine/master/Images/Slot%20image/${showSlot3}.png" alt=""></img>`
     results.textContent = "Spinning....";
     setTimeout(function () {
         winner();
@@ -167,11 +148,6 @@ function winner() {
         cash -= bet
         document.getElementById('balance').textContent = "Balance: $" + cash;
     }
-    // else {
-    //     results.textContent = "Game Over!";
-    //     cash < bet
-    //     document.getElementById('balance').textContent = "Balance: $" + cash;
-    // }
 }
 
 function endGame() {
@@ -184,33 +160,6 @@ function endGame() {
     }
 }
 
-//2x winner function
-
-// function winner2x() {
-//     if ((showSlot1 === showSlot2) || (showSlot2 === showSlot3) || (showSlot3 === showSlot1)) {
-//         results.textContent = "You Win!";
-//         cash += points2x
-//         document.getElementById('balance').textContent = "Balance: $" + cash;
-//     } else {
-//         results.textContent = "You Lose. Spin Again!";
-//         cash -= bet
-//         document.getElementById('balance').textContent = "Balance: $" + cash;
-//     }
-// }
-
-//3x winner function
-
-// function winner3x() {
-//     if ((showSlot1 === showSlot2) || (showSlot2 === showSlot3) || (showSlot3 === showSlot1)) {
-//         results.textContent = "You Win!";
-//         cash += points3x
-//         document.getElementById('balance').textContent = "Balance: $" + cash;
-//     } else {
-//         results.textContent = "You Lose. Spin Again!";
-//         cash -= bet
-//         document.getElementById('balance').textContent = "Balance: $" + cash;
-//     }
-// }
 
 function init() {
     cash = 100;
