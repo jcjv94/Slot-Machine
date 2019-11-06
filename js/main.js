@@ -7,9 +7,9 @@ let slot2 = ["seven", "lemon", "cherry", "orange", "bar", "grape", "banana", "wa
 let slot3 = ["seven", "lemon", "cherry", "orange", "bar", "grape", "banana", "watermelon"]
 
 let cash = 100;
-var bet = 20;
+var bet = 10;
+// var remainingCash =;
 
-// var remainingCash = cash - bet;
 // let wallet = document.querySelector('#balance') + '' + remainingCash;
 
 // let imageEndPoint = `https://raw.githubusercontent.com/jcjv94/Slot-Machine/master/Images/Slot%20image/`
@@ -62,10 +62,9 @@ document.getElementById('spinner').addEventListener('click', function () {
     img1.textContent = '';
     img2.textContent = '';
     img3.textContent = '';
+    // setTimeout(function() {
     setTimeout(function () {
-        // note that you only need a single animation
         spin()
-        // setTimeout(function() {
         img1.style.animationName = 'ring1';
         img2.style.animationName = 'ring1';
         img3.style.animationName = 'ring1';
@@ -81,7 +80,6 @@ function winner() {
         results.textContent = "You Win!";
         cash += bet
         document.getElementById('balance').textContent = "Balance: $" + cash;
-        // console.log(remainingCash);
     } else {
         results.textContent = "You Lose. Spin Again!";
         cash -= bet

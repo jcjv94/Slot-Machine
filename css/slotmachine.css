@@ -86,17 +86,13 @@ h1 {
     display: inline-block;
 }
 
-#balance {
-    color: white;
-}
-
-#instructions {
-    color: white;
-}
-
-.info{
+.info {
     float: right;
-    margin-top: 0;
+    margin-top: 0%;
+    padding-top: 0%;
+    font-family: 'Press Start 2P', cursive;
+    color: #6ef732;
+    font-size: 13px;
 }
 
 @keyframes ring1 {
@@ -108,3 +104,65 @@ h1 {
         transform: rotateX(720);
     }
 }
+
+/* @media only screen and (max-width: 767px) {
+    #spinner {
+        font-size: 10px;
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+        min-height: fit-content;
+        margin: 25px 0 10px 0;
+        text-transform: uppercase;
+    
+    }
+    h1 {
+        font-size: 30px;
+        text-shadow: 1px 1px 0 red;
+    }
+    #result {
+        color: white;
+        font-size: 20px;
+        text-shadow: 1px 1px 0 black;
+    }
+    body {
+        margin-top: 5vh;
+    }
+    #slt1 {
+        width: 87.5px;
+        height: 875.px;
+        animation-name: ring1;
+        animation-duration: 2.5s;
+        transform: rotateX(3600deg);
+        overflow: hidden;
+    }
+    
+    #slt2 {
+        width: 87.5px;
+        height: 87.5px;
+        animation-name: ring1;
+        animation-duration: 3.2s;
+        transform: rotateX(3600deg);
+        overflow: hidden;
+    
+    }
+    
+    #slt3 {
+        width: 87.5px;
+        height: 87.5px;
+        animation-name: ring1;
+        animation-duration: 3.9s;
+        transform: rotateX(3600deg);
+        overflow: hidden;
+    }
+    
+    .fullGame {
+        border: 2px solid white;
+        border-radius: 7px;
+        background-color: #000000ad;
+        width: 25%%;
+        margin: 0 auto;
+        padding: 10px;
+    
+    }
+} */
