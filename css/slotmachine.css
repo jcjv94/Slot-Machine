@@ -44,6 +44,12 @@ h1 {
 
 }
 
+.disabledSpinner{
+    opacity: 30%;
+    cursor: not-allowed;
+    visibility: hidden;
+}
+
 #slt1 {
     width: 175px;
     height: 175px;
