@@ -25,7 +25,7 @@ h1 {
     font-family: 'Rye', cursive;
 }
 
-button {
+#spinner {
     /* display: flex; */
     border: 2px solid white;
     background-color: rgba(255, 0, 0, 0.767);
@@ -84,6 +84,19 @@ button {
 
 .circle {
     display: inline-block;
+}
+
+#balance {
+    color: white;
+}
+
+#instructions {
+    color: white;
+}
+
+.info{
+    float: right;
+    margin-top: 0;
 }
 
 @keyframes ring1 {

@@ -1,32 +1,17 @@
 // create slots- slot1, slot2, slot3
-// const seven = document.getElementById(seven);
-// const lemon = document.getElementById(lemon);
-// const cherry = document.getElementById(cherry);
-// const orange = document.getElementById(orange);
-
-// seven.src = "https://raw.githubusercontent.com/jcjv94/Slot-Machine/master/Images/Slot%20image/seven.png";
-// lemon.src = "https://raw.githubusercontent.com/jcjv94/Slot-Machine/master/Images/Slot%20image/lemon.png";
-// cherry.src = "https://raw.githubusercontent.com/jcjv94/Slot-Machine/master/Images/Slot%20image/cherry.png";
-// orange.src = "https://raw.githubusercontent.com/jcjv94/Slot-Machine/master/Images/Slot%20image/orange.png";
-
-
-
-// let slot1 = [seven, lemon, cherry, orange]
-// let slot2 = [seven, lemon, cherry, orange]
-// let slot3 = [seven, lemon, cherry, orange]
-
-
-// function slotImages() {
-//     var img = document.createElement('img');
-//     img.src = "https://raw.githubusercontent.com/jcjv94/Slot-Machine/master/Images/Slot%20image/orange.png";
-//     document.slot1.appendChild(img);
-// }
 
 /*----- constants -----*/
 
 let slot1 = ["seven", "lemon", "cherry", "orange", "bar", "grape", "banana", "watermelon"]
 let slot2 = ["seven", "lemon", "cherry", "orange", "bar", "grape", "banana", "watermelon"]
 let slot3 = ["seven", "lemon", "cherry", "orange", "bar", "grape", "banana", "watermelon"]
+
+let cash = 100;
+var bet = 20;
+
+// var remainingCash = cash - bet;
+// let wallet = document.querySelector('#balance') + '' + remainingCash;
+
 // let imageEndPoint = `https://raw.githubusercontent.com/jcjv94/Slot-Machine/master/Images/Slot%20image/`
 
 /*----- app's state (variables) -----*/
@@ -71,8 +56,6 @@ let img2 = document.querySelector('#slt2');
 let img3 = document.querySelector('#slt3');
 
 document.getElementById('spinner').addEventListener('click', function () {
-    console.log("HITTING")
-    console.log(img1)
     img1.style.animationName = 'none';
     img2.style.animationName = 'none';
     img3.style.animationName = 'none';
@@ -87,11 +70,8 @@ document.getElementById('spinner').addEventListener('click', function () {
         img2.style.animationName = 'ring1';
         img3.style.animationName = 'ring1';
 
-        // 
-        // }, 3200);
     }, 100);
 });
-
 
 
 let results = document.getElementById('result');
@@ -99,45 +79,20 @@ let results = document.getElementById('result');
 function winner() {
     if ((showSlot1 === showSlot2) && (showSlot2 === showSlot3) && (showSlot3 === showSlot1)) {
         results.textContent = "You Win!";
+        cash += bet
+        document.getElementById('balance').textContent = "Balance: $" + cash;
+        // console.log(remainingCash);
     } else {
         results.textContent = "You Lose. Spin Again!";
+        cash -= bet
+        document.getElementById('balance').textContent = "Balance: $" + cash;
     }
 }
 
-
-
-
-
-
-
-// document.querySelector('button').addEventListener('click', spin)
-// document.querySelectorAll('.allSlots').addEventListener('click', spin);
-
-
-// function init() {
-//     spin = 
-//     winner = null;
-//     render();
-//   }
-
-
-
-
-// initialize null- empty slots, no one has pushed the button (or lever) 
-
-// define winning combinations
-
-// create button to spin the slots.
-
-// when buttons is push button to randomize slots (spinning effect on images)
-
-// have the 3 slots stop spinning one after another.
-
-// if you get 3 of the same picture player wins- possibly add audio when a player hits the jackpot- possibly add point system, in order o gain credits to spin again
-
-// if you don’t get 3 of the same picture, you lose. Spin again option
-
-
-// var rotate = false;
-// var circles = document.querySelectorAll('.circle');
-// var message = document.querySelectorAll('.msg');
+// function wallet() {
+//     if (results.textContent ==== "You Win!") {
+//         var total = document.getElementById('.balance')
+//     }
+//     else
+//     var total = document.getElementById('.balance')
+// }
