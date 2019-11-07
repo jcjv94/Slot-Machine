@@ -134,7 +134,7 @@ function winner() {
         cash += points3x[showSlot1]
         document.getElementById('balance').textContent = "Balance: $" + cash;
     } else if ((showSlot1 === showSlot2) || (showSlot2 === showSlot3) || (showSlot3 === showSlot1)) {
-        results.textContent = "Little Win!";
+        results.textContent = "Small Win!";
         if (showSlot1 == showSlot2) {
             cash += points2x[showSlot1]
         } else if (showSlot2 == showSlot3) {
@@ -144,7 +144,7 @@ function winner() {
         }
         document.getElementById('balance').textContent = "Balance: $" + cash;
     } else if ((showSlot1 !== showSlot2) || (showSlot2 !== showSlot3) || (showSlot3 !== showSlot1)) {
-        results.textContent = "You Lose. Spin Again!";
+        results.textContent = "No Match. Spin Again!";
         cash -= bet
         document.getElementById('balance').textContent = "Balance: $" + cash;
     }
@@ -159,6 +159,7 @@ function endGame() {
         return;
     }
 }
+
 
 
 function init() {

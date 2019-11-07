@@ -106,7 +106,7 @@ h1 {
     text-shadow: 3px 3px 0 blue;
 }
 
-.hide{
+.hide {
     border: 1px solid #ccc;
     display: none;
     font-size: 10px;
@@ -116,7 +116,7 @@ h1 {
     text-align: left;
 }
 
-.info:hover .hide{
+.info:hover .hide {
     display: block;
 }
 
