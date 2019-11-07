@@ -1,16 +1,21 @@
 // create slots- slot1, slot2, slot3
 
 /*----- constants -----*/
+
+//all characters/images
 const AllTypes = ["seven", "lemon", "cherry", "orange", "bar", "grape", "banana", "watermelon"]
 
+//all slot options linking to the variable above so each slot has the specific variables
 let slot1 = AllTypes;
 let slot2 = AllTypes;
 let slot3 = AllTypes;
 
+//game over is initially false until endGame function is envoked
 let isGameOver = false;
-// test point system
 
-let points2x = {
+// point system for each character image
+
+const points2x = {
     seven: 75,
     lemon: 25,
     cherry: 40,
@@ -21,7 +26,7 @@ let points2x = {
     watermelon: 100
 };
 
-let points3x = {
+const points3x = {
     seven: 150,
     lemon: 50,
     cherry: 80,
@@ -32,27 +37,41 @@ let points3x = {
     watermelon: 200
 };
 
-
+// balance on html starts you at $100, but is switched with cash varible to display live time balance upon spins
 let cash = 0;
+
+//if you don't match a pair or 3 of a kind each spin costs $25 
 const bet = 25;
 
 /*----- app's state (variables) -----*/
+
+//showSlots referenced in spin & winner functions to reference the slots once they're filled with the images
 
 let showSlot1, showSlot2, showSlot3;
 
 /*----- cached element references -----*/
 
+//referenced these variables to call the query selector for each slot class to display the image 
+
 let img1 = document.querySelector('#slt1');
 let img2 = document.querySelector('#slt2');
 let img3 = document.querySelector('#slt3');
 
+//referenced this variable to call the results ID to display the results on each spin
+
 let results = document.getElementById('result');
 
-/*----- event listeners -----*/
+//referenced this variable to call the spinner ID that is connected to the spin button
 let spinner = document.getElementById('spinner');
 
-document.getElementById('spinner').addEventListener('click', function () {
+/*----- event listeners -----*/
 
+//event listener on the spin button waiting for the click event to take place
+
+document.getElementById('spinner').addEventListener('click', function () {
+    /*----- functions -----*/
+
+    //once the function above takes place, it calls the init function to set the initial images to none
     if (isGameOver) {
         init();
     }
@@ -62,7 +81,7 @@ document.getElementById('spinner').addEventListener('click', function () {
     img1.textContent = '';
     img2.textContent = '';
     img3.textContent = '';
-    // setTimeout(function() {
+    // setTimeout function is called on the click of the spinner to animate each slot and set the time amount
     setTimeout(function () {
         spin()
         img1.style.animationName = 'ring1';
@@ -73,7 +92,7 @@ document.getElementById('spinner').addEventListener('click', function () {
 });
 
 
-/*----- functions -----*/
+//upon the click of the spinner, spin function is envoked using setTime out to randomize the images within each slot
 
 function spin() {
     // randomize slot1
@@ -87,12 +106,18 @@ function spin() {
 
     ////////////////////////////////
 
+    //x is the amount of rotations through each array of characters
     let x = 1
+
+    //id is the amount of time each interval(roation) is set to each frame when displayed
+
     var id = setInterval(frame, 400);
 
+    // frame function adjusts the rotations and invertals to display the random images on each spin so that it isn't just 1 image the entire time
     function frame() {
         if (x == 7) {
             clearInterval(id);
+            //once the roations hits 7, interval stops and displays final image, else keep randomizing
         } else {
             x++;
             let firstSlot = document.getElementById('slt1')
@@ -106,7 +131,7 @@ function spin() {
             let thirdSlot = document.getElementById('slt3')
             let randomNumber3 = Math.floor(Math.random() * AllTypes.length)
             thirdSlot.children[0].src = `https://raw.githubusercontent.com/jcjv94/Slot-Machine/master/Images/Slot_image/${AllTypes[randomNumber3]}.png`
-
+            // displays random image from array length to determine which image is shown in each slot
             showSlot1 = AllTypes[randomNumber1]
             showSlot2 = AllTypes[randomNumber2]
             showSlot3 = AllTypes[randomNumber3]
@@ -114,9 +139,9 @@ function spin() {
         }
     }
 
-
-
     ////////////////////////////////
+
+    //results display spinning until the timer hits 4 seconds (on last slot spin) where winner or endgame function in envoked
 
     results.textContent = "Spinning....";
     setTimeout(function () {
@@ -125,7 +150,7 @@ function spin() {
     }, 4000)
 }
 
-
+//winner function determines money balance, big win, small win, or spin again
 
 function winner() {
 
@@ -150,6 +175,7 @@ function winner() {
     }
 }
 
+//end game function determines when the cash amount you have left in your balance is less than the bet amount, to end the game
 function endGame() {
     while (cash < 25) {
         results.textContent = "Game Over!";
@@ -160,7 +186,7 @@ function endGame() {
     }
 }
 
-
+//initialize function setting the balance, and letting the game know that it is not over yet
 
 function init() {
     cash = 100;
