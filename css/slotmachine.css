@@ -86,14 +86,40 @@ h1 {
     display: inline-block;
 }
 
-.info {
-    float: right;
+#balance {
+    float: left;
     margin-top: 0%;
     padding-top: 0%;
     font-family: 'Press Start 2P', cursive;
     color: #6ef732;
-    font-size: 13px;
+    font-size: 15px;
+    text-shadow: 3px 3px 0 blue;
 }
+
+#instructions {
+    float: right;
+    margin-top: 0%;
+    padding-top: 0%;
+    font-family: 'Press Start 2P', cursive;
+    color: whitesmoke;
+    font-size: 15px;
+    text-shadow: 3px 3px 0 blue;
+}
+
+.hide{
+    border: 1px solid #ccc;
+    display: none;
+    font-size: 10px;
+    margin-top: 10px;
+    padding: 5px;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.info:hover .hide{
+    display: block;
+}
+
 
 @keyframes ring1 {
     from {
