@@ -24,7 +24,7 @@ The purpose of this game is to test your luck! See if you can match 3 images in 
 
 ### Technologies Used:
 
-![HTML | CSS | JAVASCRIPT] (https://raw.githubusercontent.com/jcjv94/Slot-Machine/master/Images/technologies.png)
+![HTML|CSS|JAVASCRIPT] (https://raw.githubusercontent.com/jcjv94/Slot-Machine/master/Images/technologies.png)
 
 ### Game Play:
 
