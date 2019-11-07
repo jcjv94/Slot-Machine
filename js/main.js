@@ -115,7 +115,7 @@ function spin() {
 
     // frame function adjusts the rotations and invertals to display the random images on each spin so that it isn't just 1 image the entire time
     function frame() {
-        if (x == 7) {
+        if (x == 6) {
             clearInterval(id);
             //once the roations hits 7, interval stops and displays final image, else keep randomizing
         } else {

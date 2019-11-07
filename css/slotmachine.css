@@ -1,11 +1,5 @@
 body {
-    /* background: black; */
-    /* display: grid; */
-    /* grid-template-columns: auto auto auto; */
-    /* position: center; */
-    /* justify-content: center; */
     text-align: center;
-    /* margin: auto; */
     background-image: url(https://images.unsplash.com/photo-1482177988528-7f1d8d6e775c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80);
     margin-top: 10vh;
 }
@@ -13,7 +7,6 @@ body {
 h1 {
     font-family: 'Rye', cursive;
     font-size: 60px;
-    /* border: 2px dashed blue; */
     color: whitesmoke;
     text-shadow: 3px 3px 0 red;
 }
@@ -26,17 +19,12 @@ h1 {
 }
 
 #spinner {
-    /* display: flex; */
     border: 2px solid white;
     background-color: rgba(255, 0, 0, 0.767);
     color: whitesmoke;
-    /* display: block; */
-    /* margin: 20px auto; */
     font-size: 20px;
     width: 100px;
     height: 100px;
-    /* -webkit-border-radius: 25px; */
-    /* -moz-border-radius: 25px; */
     border-radius: 50px;
     min-height: fit-content;
     margin: 50px 0 20px 0;
@@ -130,65 +118,3 @@ h1 {
         transform: rotateX(720);
     }
 }
-
-/* @media only screen and (max-width: 767px) {
-    #spinner {
-        font-size: 10px;
-        width: 50px;
-        height: 50px;
-        border-radius: 25px;
-        min-height: fit-content;
-        margin: 25px 0 10px 0;
-        text-transform: uppercase;
-    
-    }
-    h1 {
-        font-size: 30px;
-        text-shadow: 1px 1px 0 red;
-    }
-    #result {
-        color: white;
-        font-size: 20px;
-        text-shadow: 1px 1px 0 black;
-    }
-    body {
-        margin-top: 5vh;
-    }
-    #slt1 {
-        width: 87.5px;
-        height: 875.px;
-        animation-name: ring1;
-        animation-duration: 2.5s;
-        transform: rotateX(3600deg);
-        overflow: hidden;
-    }
-    
-    #slt2 {
-        width: 87.5px;
-        height: 87.5px;
-        animation-name: ring1;
-        animation-duration: 3.2s;
-        transform: rotateX(3600deg);
-        overflow: hidden;
-    
-    }
-    
-    #slt3 {
-        width: 87.5px;
-        height: 87.5px;
-        animation-name: ring1;
-        animation-duration: 3.9s;
-        transform: rotateX(3600deg);
-        overflow: hidden;
-    }
-    
-    .fullGame {
-        border: 2px solid white;
-        border-radius: 7px;
-        background-color: #000000ad;
-        width: 25%%;
-        margin: 0 auto;
-        padding: 10px;
-    
-    }
-} */
