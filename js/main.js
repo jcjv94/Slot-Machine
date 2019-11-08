@@ -41,6 +41,12 @@ let cash = 0;
 //if you don't match a pair or 3 of a kind each spin costs $25 
 const bet = 25;
 
+const sounds = {
+    bgW: 'https://raw.githubusercontent.com/jcjv94/Slot-Machine/master/Audio/big-win.wav',
+    smW: 'https://raw.githubusercontent.com/jcjv94/Slot-Machine/master/Audio/small-win.wav',
+    gmO: 'https://raw.githubusercontent.com/jcjv94/Slot-Machine/master/Audio/game-over.wav'
+}
+
 /*----- app's state (variables) -----*/
 
 //showSlots referenced in spin & winner functions to reference the slots once they're filled with the images
@@ -54,6 +60,8 @@ let showSlot1, showSlot2, showSlot3;
 let img1 = document.querySelector('#slt1');
 let img2 = document.querySelector('#slt2');
 let img3 = document.querySelector('#slt3');
+
+const player = new Audio();
 
 //referenced this variable to call the results ID to display the results on each spin
 
@@ -154,10 +162,14 @@ function winner() {
 
     if ((showSlot1 === showSlot2) && (showSlot2 === showSlot3)) {
         results.textContent = "Big Win!";
+        player.src = sounds.bgW;
+        player.play();
         cash += points3x[showSlot1]
         document.getElementById('balance').textContent = "Balance: $" + cash;
     } else if ((showSlot1 === showSlot2) || (showSlot2 === showSlot3) || (showSlot3 === showSlot1)) {
         results.textContent = "Small Win!";
+        player.src = sounds.smW;
+        player.play();
         if (showSlot1 == showSlot2) {
             cash += points2x[showSlot1]
         } else if (showSlot2 == showSlot3) {
@@ -177,6 +189,8 @@ function winner() {
 function endGame() {
     while (cash < 25) {
         results.textContent = "Game Over!";
+        player.src = sounds.gmO;
+        player.play();
         document.getElementById('balance').textContent = "Balance: $" + cash;
         spinner.innerText = "Reset";
         isGameOver = true;
