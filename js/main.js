@@ -75,7 +75,7 @@ let spinner = document.getElementById('spinner');
 //event listener on the spin button waiting for the click event to take place
 
 document.getElementById('spinner').addEventListener('click', function () {
-/*----- functions -----*/
+    /*----- functions -----*/
 
     //once the function above takes place, it calls the init function to set the initial images to none
     if (isGameOver) {
